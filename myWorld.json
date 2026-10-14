@@ -1,130 +1,45 @@
 {
-  "title": "A grid-based world.",
-  "credits": "Created by Markus Eger (meger@ucsc.edu).",
-  "start": {
-    "x": 0,
-    "y": 0
-  },
-  "exit": {
-    "x": 2,
-    "y": 2
-  },
-  "values": {
-    "key": 3,
-    "nazar_amulet": 4,
-    "vampire": 5,
-    "giraffe": 4,
-    "pie": 3
-  },
-  "interactions": [
-    {
-      "label": "Use the telephone",
-      "needs": [
-        "telephone"
-      ],
-      "messages": [
-        "Wrong number.",
-        "Nobody answers.",
-        {
-          "text": "You won a prize! (+1 point)",
-          "bonus": 1
+    "title": "A grid-based world.",
+    "credits": "Created by Markus Eger (meger@ucsc.edu).",
+    "start": {"x": 0, "y": 0},
+    "exit": {"x": 2, "y": 2},
+    "rooms": {
+        "0_0": {
+            "name": "Entrance",
+            "description": "Welcome to the entrance.",
+            "items": ["cat2", "banana", "coconut"]
+        },
+        "1_0": {
+            "name": "Hallway",
+            "description": "An almost empty hallway.",
+            "items": ["bone"]
+        },
+        "0_1": {
+            "name": "The sitting room",
+            "description": "Two couches next to a coffee table.",
+            "items": ["coffee", "newspaper", "key"]
+        },
+        "2_0": {
+            "name": "Main Hall",
+            "description": "The main area of the house",
+            "items": ["cat2", "vampire", "telephone", "nazar_amulet"],
+            "requires": ["key"]
+        },
+        "0_2": {
+            "name": "Kitchen",
+            "description": "A very fancy kitchen. It smells like pine cones for some reason.",
+            "items": ["cat2", "broccoli", "pie", "pretzel"],
+            "requires": ["nazar_amulet"]
+        },
+        "1_2": {
+            "name": "Pantry",
+            "description": "There should be food stored here, but you find something else instead.",
+            "items": ["giraffe", "hammer"]
+        },
+        "2_2": {
+            "name": "Treasure room",
+            "description": "You have made it to your destination! Let's count how many treasures you were able to collect on your way here.",
+            "items": []
         }
-      ]
-    },
-    {
-      "label": "Throw the bone for the cat",
-      "needs": [
-        "bone",
-        "cat2"
-      ],
-      "messages": [
-        "The cat ignores the bone.",
-        {
-          "text": "The cat brings the bone back! (+1 point)",
-          "bonus": 1
-        }
-      ]
-    },
-    {
-      "label": "Crack the coconut with the hammer",
-      "needs": [
-        "hammer",
-        "coconut"
-      ],
-      "consumes": [
-        "coconut"
-      ],
-      "once": true,
-      "bonus": 3,
-      "messages": [
-        "CRACK! Yummy coconut. (+3 points)"
-      ]
     }
-  ],
-  "rooms": {
-    "0_0": {
-      "name": "Entrance",
-      "description": "Welcome to the entrance.",
-      "items": [
-        "cat2",
-        "banana",
-        "coconut"
-      ]
-    },
-    "1_0": {
-      "name": "Hallway",
-      "description": "An almost empty hallway.",
-      "items": [
-        "bone"
-      ]
-    },
-    "0_1": {
-      "name": "The sitting room",
-      "description": "Two couches next to a coffee table.",
-      "items": [
-        "coffee",
-        "newspaper",
-        "key"
-      ]
-    },
-    "2_0": {
-      "name": "Main Hall",
-      "description": "The main area of the house",
-      "items": [
-        "cat2",
-        "vampire",
-        "telephone",
-        "nazar_amulet"
-      ],
-      "requires": [
-        "key"
-      ]
-    },
-    "0_2": {
-      "name": "Kitchen",
-      "description": "A very fancy kitchen. It smells like pine cones for some reason.",
-      "items": [
-        "cat2",
-        "broccoli",
-        "pie",
-        "pretzel"
-      ],
-      "requires": [
-        "nazar_amulet"
-      ]
-    },
-    "1_2": {
-      "name": "Pantry",
-      "description": "There should be food stored here, but you find something else instead.",
-      "items": [
-        "giraffe",
-        "hammer"
-      ]
-    },
-    "2_2": {
-      "name": "Treasure room",
-      "description": "You have made it to your destination! Let's count how many treasures you were able to collect on your way here.",
-      "items": []
-    }
-  }
 }
