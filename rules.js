@@ -103,7 +103,7 @@ class Room extends Scene {
         var room = this.engine.storyData.rooms[x + "_" + y];
         if (!room || !room.requires) return "";
         var missing = room.requires.filter((item) => !(player.items[item] > 0));
-        return "🔒 Locked. Needs: " + missing.map((item) => this.engine.itemString(item)).join(" ");
+        return " Locked. Needs: " + missing.map((item) => this.engine.itemString(item)).join(" ");
     }
 
     // INTERACTIONS: add a button for every interaction in the JSON ("interactions" list)
