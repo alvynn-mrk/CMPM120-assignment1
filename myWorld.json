@@ -40,7 +40,7 @@
         },
         "0_3": {
             "name": "Empty room",
-            "description": "Just an empty room."
+            "description": "Just an empty room.",
             "items": []
             
         },
@@ -52,14 +52,14 @@
         },
         "2_3":{
             "name": "Suspicious room",
-            "description": "A hooded man is standing in the middle of the room. You approach him, and he asks if you got the stuff. You're unsure what stuff he's talking about, and he suddenly points at the giraffe. You give it to him in exchange for pie."
-            "items": ["pie"]
+            "description": "A hooded man is standing in the middle of the room. You approach him, and he asks if you got the stuff. You're unsure what stuff he's talking about, and he suddenly points at the giraffe. You give it to him in exchange for pie.",
+            "items": ["pie"],
             "requires": ["giraffe"]
         },
         "3_3": {
             "name": "Treasure room",
             "description": "You have made it to your destination! Let's count how many treasures you were able to collect on your way here.",
-            "items": []
+            "items": [],
             "requires": ["key"]
         }
     }
