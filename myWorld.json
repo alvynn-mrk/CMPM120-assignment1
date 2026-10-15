@@ -2,44 +2,65 @@
     "title": "A grid-based world.",
     "credits": "Created by Markus Eger (meger@ucsc.edu).",
     "start": {"x": 0, "y": 0},
-    "exit": {"x": 2, "y": 2},
+    "exit": {"x": 3, "y": 3},
     "rooms": {
         "0_0": {
             "name": "Entrance",
             "description": "Welcome to the entrance.",
-            "items": ["cat2", "banana", "coconut"]
+            "items": ["cat2"]
         },
         "1_0": {
             "name": "Hallway",
-            "description": "An almost empty hallway.",
+            "description": "An almost empty hallway. Until you see in the corner a long bone, perhaps a human's femur???",
             "items": ["bone"]
         },
         "0_1": {
-            "name": "The sitting room",
-            "description": "Two couches next to a coffee table.",
-            "items": ["coffee", "newspaper", "key"]
+            "name": "The ominous room",
+            "description": "A dark room, but only one singular light is shining down on a table with a cup of coffee and a key. You drink the coffee and grab the key",
+            "items": ["coffee", "key"]
         },
         "2_0": {
             "name": "Main Hall",
-            "description": "The main area of the house",
-            "items": ["cat2", "vampire", "telephone", "nazar_amulet"],
+            "description": "The main area of the house and a totally not suspicious vampire looking at you",
+            "items": ["cat2", "vampire", "nazar_amulet"],
             "requires": ["key"]
         },
         "0_2": {
             "name": "Kitchen",
-            "description": "A very fancy kitchen. It smells like pine cones for some reason.",
+            "description": "A nice modern-looking kitchen. Nothing special in here.",
             "items": ["cat2", "broccoli", "pie", "pretzel"],
             "requires": ["nazar_amulet"]
+
         },
-        "1_2": {
-            "name": "Pantry",
-            "description": "There should be food stored here, but you find something else instead.",
+        "3_0": {
+            "name": "Clock room",
+            "description": "A room just filled with a lot of clocks. But one stands out to you, and you turn it around and find a key!",
+            "items": ["key", "alarm_clock"]
+
+        },
+        "0_3": {
+            "name": "Empty room",
+            "description": "Just an empty room."
+            "items": []
+            
+        },
+        "1_3": {
+            "name": "A zoo?",
+            "description": "You enter the room that says free food on it, only to step into a room full of giraffes. You pick one giraffe, and suddenly it gagged out a hammer. Free hammer, I guess.",
             "items": ["giraffe", "hammer"]
+
         },
-        "2_2": {
+        "2_3":{
+            "name": "Suspicious room",
+            "description": "A hooded man is standing in the middle of the room. You approach him, and he asks if you got the stuff. You're unsure what stuff he's talking about, and he suddenly points at the giraffe. You give it to him in exchange for pie."
+            "items": ["pie"]
+            "requires": ["giraffe"]
+        },
+        "3_3": {
             "name": "Treasure room",
             "description": "You have made it to your destination! Let's count how many treasures you were able to collect on your way here.",
             "items": []
+            "requires": ["key"]
         }
     }
 }
