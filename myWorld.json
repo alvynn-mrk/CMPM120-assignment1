@@ -3,6 +3,18 @@
     "credits": "Created by Markus Eger (meger@ucsc.edu).",
     "start": {"x": 0, "y": 0},
     "exit": {"x": 3, "y": 3},
+    "vales": {"key": 3, "nazar_amulet": 5, "vampire": 4, "hammer": 2, "alarm_clock": 2, "giraffe": 3},
+
+    "interactions":[
+        {"label": "Ring the alarm clock", "needs": ["alarm_clock"],
+         "messages": ["Ring ring! Nothing happens.", {"text": "All the clocks chime at once! (+1 point)", "bonus": 1}]},
+        {"label": "Throw the bone for the cat", "needs": ["bone", "cat2"],
+         "messages": ["The cat ignores the bone.", {"text": "The cat brings it back! (+1 point)", "bonus": 1}]},
+        {"label": "Show the amulet to the vampire", "needs": ["nazar_amulet", "vampire"],
+         "once": true, "bonus": 5,
+         "messages": ["The vampire hisses and runs away, dropping a bag of coins. (+5 points)"]}
+    ],
+        
     "rooms": {
         "0_0": {
             "name": "Entrance",
